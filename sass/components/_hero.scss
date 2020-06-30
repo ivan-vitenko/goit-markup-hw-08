@@ -1,0 +1,133 @@
+/* Герой */
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  width: $mobile-screen;
+
+  background-color: $possibility-background-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $possibility-background-color,
+          $possibility-background-color
+        ),
+        url(../images/hero-mobile@2x.jpg);
+    }
+
+    background-image: linear-gradient(
+        to right,
+        $possibility-background-color,
+        $possibility-background-color
+      ),
+      url(../images/hero-mobile.jpg);
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    width: $tablet-screen;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $possibility-background-color,
+          $possibility-background-color
+        ),
+        url(../images/hero-tablet@2x.jpg);
+    }
+
+    background-image: linear-gradient(
+        to right,
+        $possibility-background-color,
+        $possibility-background-color
+      ),
+      url(../images/hero-tablet.jpg);
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 100%;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $possibility-background-color,
+          $possibility-background-color
+        ),
+        url(../images/hero@2x.jpg);
+    }
+
+    background-image: linear-gradient(
+        to right,
+        $possibility-background-color,
+        $possibility-background-color
+      ),
+      url(../images/hero.jpg);
+  }
+}
+
+.hero__title {
+  color: $primary-background-color;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 360px;
+
+  font-size: 26px;
+  line-height: 1.62;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop-screen) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+/* Кнопки-посилання */
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+  background-color: $accent-color;
+  color: $primary-background-color;
+  border-radius: 4px;
+  min-width: 200px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color $duration-animation $timing-animation;
+
+  &:hover,
+  &:focus {
+    color: $primary-background-color;
+    background-color: $button-hover-color;
+  }
+}

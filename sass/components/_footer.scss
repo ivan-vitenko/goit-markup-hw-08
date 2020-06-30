@@ -1,0 +1,71 @@
+/*Футер*/
+.footer {
+  background-color: $title-text-color;
+  color: $primary-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer--baseline {
+  @media screen and (min-width: $tablet-screen) {
+    @include flex();
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+}
+
+/*Адреса*/
+.address {
+  font-style: normal;
+
+  @media screen and (max-width: $desktop-screen - 1px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.address__link:not(:last-child) {
+  display: block;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-bottom: 9px;
+  }
+}
+
+.contacts-footer {
+  color: $contacts-footer;
+}
+
+/* Слогани */
+.socials-slogan {
+  width: 209px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.slogans__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $desktop-screen - 1px) {
+    text-align: center;
+  }
+}

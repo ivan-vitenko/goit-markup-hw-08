@@ -1,0 +1,28 @@
+/* Можливості */
+
+.possibility-section {
+  @media screen and (max-width: $desktop-screen - 1px) {
+    display: none;
+  }
+}
+
+.possibility-section__item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+}
+
+.possibility-section__label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $primary-background-color;
+  background-color: $possibility-background-color;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}

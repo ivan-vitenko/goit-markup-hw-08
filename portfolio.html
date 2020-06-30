@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <!--Шапка-->
+    <header class="header">
+      <div class="container header-content">
+        <a href="./index.html" lang="en" class="logo--header">
+          <span class="accent">Web</span> Studio</a
+        >
+
+        <div class="mobile-menu-container" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="main-nav__nav">
+              <li class="main-nav__item">
+                <a href="./index.html" class="main-nav__link">Студия</a>
+              </li>
+              <li class="main-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="main-nav__link main-nav__link--current accent"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="main-nav__item">
+                <a href="" class="main-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link"
+                ><svg class="contacts__icon--envelope">
+                  <use href="./images/sprite-opt.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="contacts__link"
+                ><svg class="contacts__icon--phone">
+                  <use href="./images/sprite-opt.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          type="button"
+          class="main-nav__mobile-menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="main-nav__mobile-menu-icon"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="main-nav__mobile-menu-icon--open"
+              href="./images/sprite-opt.svg#icon-mobile-menu"
+            ></use>
+            <use
+              class="main-nav__mobile-menu-icon--close"
+              href="./images/sprite-opt.svg#icon-close-mobile-menu"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!--Портфоліо-->
+    <section class="portfolio-section">
+      <div class="container">
+        <ul class="filter">
+          <li class="filter__item">
+            <button type="button" class="filter__button">
+              Все
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button type="button" class="filter__button">
+              Веб-сайты
+            </button>
+          </li>
+
+          <li class="filter__item">
+            <button type="button" class="filter__button">Приложения</button>
+          </li>
+
+          <li class="filter__item">
+            <button type="button" class="filter__button">Дизайн</button>
+          </li>
+
+          <li class="filter__item">
+            <button type="button" class="filter__button">Маркетинг</button>
+          </li>
+        </ul>
+
+        <ul class="portfolio-section__list">
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-01.jpg    1x,
+                    ./images/portfolio-01@2x.jpg 2x
+                  "
+                  src="./images/portfolio-01.jpg"
+                  alt="Экран ноутбука"
+                />
+
+                <p class="portfolio-section__description">
+                  Технокряк это современная площадка распространения
+                  коронавируса. Компании используют эту платформу для цифрового
+                  шпионажа и атак на защищённые сервера конкурентов.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Технокряк</h2>
+                <p class="portfolio-section__work-type">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-02.jpg    1x,
+                    ./images/portfolio-02@2x.jpg 2x
+                  "
+                  src="./images/portfolio-02.jpg"
+                  alt="Два баскетболиста с мячем"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">
+                  Постер New Orlean vs Golden Star
+                </h2>
+                <p class="portfolio-section__work-type">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-03.jpg    1x,
+                    ./images/portfolio-03@2x.jpg 2x
+                  "
+                  src="./images/portfolio-03.jpg"
+                  alt="Лого ресторану Seafood"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Ресторан Seafood</h2>
+                <p class="portfolio-section__work-type">Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-04.jpg    1x,
+                    ./images/portfolio-04@2x.jpg 2x
+                  "
+                  src="./images/portfolio-04.jpg"
+                  alt="Наушники"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Проект Prime</h2>
+                <p class="portfolio-section__work-type">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-05.jpg    1x,
+                    ./images/portfolio-05@2x.jpg 2x
+                  "
+                  src="./images/portfolio-05.jpg"
+                  alt="Две коробочки"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Проект Boxes</h2>
+                <p class="portfolio-section__work-type">Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/section2-3.jpg    1x,
+                    ./images/section2-3@2x.jpg 2x
+                  "
+                  src="./images/section2-3.jpg"
+                  alt="Чорный монитор"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">
+                  Inspiration has no Borders
+                </h2>
+                <p class="portfolio-section__work-type">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-07.jpg    1x,
+                    ./images/portfolio-07@2x.jpg 2x
+                  "
+                  src="./images/portfolio-07.jpg"
+                  alt="Разворот журнала"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">
+                  Издание Limited Edition
+                </h2>
+                <p class="portfolio-section__work-type">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/portfolio-08.jpg    1x,
+                    ./images/portfolio-08@2x.jpg 2x
+                  "
+                  src="./images/portfolio-08.jpg"
+                  alt="Бирка"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Проект LAB</h2>
+                <p class="portfolio-section__work-type">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="portfolio-section__item">
+            <a href="" class="portfolio-section__link">
+              <div class="portfolio-section__content">
+                <img
+                  srcset="
+                    ./images/section2-1.jpg    1x,
+                    ./images/section2-1@2x.jpg 2x
+                  "
+                  src="./images/section2-1.jpg"
+                  alt="Ноутбук"
+                />
+                <p class="portfolio-section__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  fuga, dolore in voluptatibus veritatis maiores. Error, facere
+                  voluptates quisquam recusandae hic possimus, quasi
+                  consectetur, ab dolor vitae eius facilis dicta.
+                </p>
+              </div>
+              <div class="portfolio-section__text-content">
+                <h2 class="portfolio-section__title">Growing Business</h2>
+                <p class="portfolio-section__work-type">Приложение</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Футер-->
+    <footer class="footer">
+      <div class="container footer--baseline">
+        <div>
+          <a href="./index.html" class="logo-footer">
+            <span class="accent">Web</span> Studio
+          </a>
+          <address class="address">
+            <a
+              target="blanc"
+              href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383859?hl=ru"
+              class="address__link"
+              >г. Киев, пр-т Леси Украинки, 26
+            </a>
+
+            <div class="contacts-footer">
+              <a href="mailto:info@example.com" class="address__link"
+                >info@example.com</a
+              >
+              <a href="tel:380991111111" class="address__link"
+                >+38 099 111 11 11</a
+              >
+            </div>
+          </address>
+        </div>
+
+        <div class="socials-slogan">
+          <p class="slogans__title">присоединяйтесь</p>
+          <ul class="space-between">
+            <li>
+              <a href="" class="socials--dark">
+                <svg class="socials__icon">
+                  <use href="./images/sprite-opt.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="socials--dark">
+                <svg class="socials__icon">
+                  <use href="./images/sprite-opt.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="socials--dark">
+                <svg class="socials__icon">
+                  <use href="./images/sprite-opt.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="socials--dark">
+                <svg class="socials__icon">
+                  <use href="./images/sprite-opt.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form action="" class="subscription-form">
+          <p class="slogans__title">Подпишитесь на рассылку</p>
+          <input
+            type="email"
+            class="subscription-form__input"
+            name="subscription-mail"
+            placeholder="E-mail"
+          />
+
+          <div class="subscription-form__button-container">
+            <button type="submit" class="subscription-form__button">
+              Подписаться
+            </button>
+
+            <svg class="subscription-form__button-icon">
+              <use href="./images/sprite-opt.svg#icon-send"></use>
+            </svg>
+          </div>
+        </form>
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

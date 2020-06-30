@@ -1,0 +1,28 @@
+/* Соціальні мережі */
+.socials {
+  background-color: $primary-background-color;
+  fill: $socials-color;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: background-color $duration-animation $timing-animation,
+    fill $duration-animation $timing-animation;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $primary-background-color;
+  }
+}
+
+.socials--dark {
+  @include flex($justify-content: center);
+  @extend .socials;
+  background-color: $caption-developer-border-color;
+  fill: $primary-background-color;
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+}

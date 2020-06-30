@@ -1,0 +1,193 @@
+/* Шапка */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-content {
+  position: relative;
+
+  @media screen and (min-width: $tablet-screen) {
+    @include flex();
+  }
+}
+
+.mobile-menu-container {
+  @include flex();
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    padding: 50px 60px 60px 60px;
+    background-color: $primary-background-color;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.main-nav {
+  @media screen and (min-width: $tablet-screen) {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-right: 309px;
+  }
+}
+
+/*Меню*/
+.main-nav__nav {
+  display: flex;
+  color: $title-text-color;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+  width: max-content;
+}
+
+.main-nav__item:not(:last-child) {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    margin-right: 50px;
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.main-nav__link--current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+
+/*Контакти*/
+.contacts {
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    display: flex;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    margin-right: 30px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
+
+%contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts__icon--envelope {
+  @extend %contacts__icon;
+  width: 16px;
+  height: 11px;
+}
+
+.contacts__icon--phone {
+  @extend %contacts__icon;
+  width: 10px;
+  height: 15px;
+}
+
+.main-nav__mobile-menu-button {
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  right: 15px;
+  padding: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet-screen) {
+    display: none;
+  }
+}
+
+.main-nav__mobile-menu-icon {
+  width: 40px;
+  height: 40px;
+
+  .main-nav__mobile-menu-button:hover & {
+    fill: $accent-color;
+  }
+}
+
+.main-nav__mobile-menu-icon--open {
+  display: block;
+}
+
+.main-nav__mobile-menu-button.is-open .main-nav__mobile-menu-icon--open {
+  display: none;
+}
+
+.main-nav__mobile-menu-icon--close {
+  display: none;
+}
+
+.main-nav__mobile-menu-button.is-open .main-nav__mobile-menu-icon--close {
+  display: block;
+}

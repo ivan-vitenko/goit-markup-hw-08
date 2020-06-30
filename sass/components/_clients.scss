@@ -1,0 +1,75 @@
+/*Клієнти*/
+.clients-section__item {
+  width: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: $tablet-screen) {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: calc((100% - 150px) / 6);
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    @media screen and (max-width: $tablet-screen - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.clients-section__list {
+  @include flex($align-items: initial);
+  flex-wrap: wrap;
+}
+
+.clients-section__link {
+  @include flex($justify-content: center);
+  height: 90px;
+  fill: $socials-color;
+  border: 1px solid $socials-color;
+  border-radius: 4px;
+  transition: fill $duration-animation $timing-animation,
+    border-color $duration-animation $timing-animation;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.clients-section__client-1 {
+  width: 44px;
+  height: 49px;
+}
+
+.clients-section__client-2 {
+  width: 40px;
+  height: 50px;
+}
+
+.clients-section__client-3 {
+  width: 41px;
+  height: 42px;
+}
+
+.clients-section__client-4 {
+  width: 80px;
+  height: 42px;
+}
+
+.clients-section__client-5 {
+  width: 59px;
+  height: 47px;
+}
+
+.clients-section__client-6 {
+  width: 88px;
+  height: 45px;
+}

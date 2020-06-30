@@ -1,0 +1,40 @@
+@import '../utils/placeholders';
+
+/*Логотип*/
+.logo--header {
+  @extend %logo;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &:hover,
+  &:focus {
+    @extend .logo--header;
+  }
+
+  @media screen and (min-width: $tablet-screen) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo-footer {
+  @extend %logo;
+  display: block;
+  color: $primary-background-color;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $desktop-screen - 1px) {
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    @extend .logo-footer;
+  }
+}

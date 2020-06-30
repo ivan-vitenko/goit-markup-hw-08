@@ -1,0 +1,80 @@
+/*Команда*/
+.team-section {
+  background-color: $portfolio-button;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop-screen - 1px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team-section__list {
+  @media screen and (min-width: $tablet-screen) {
+    @include flex($align-items: initial);
+    flex-wrap: wrap;
+  }
+}
+
+.team-section__item {
+  background-color: $primary-background-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: $tablet-screen) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    width: calc((100% - 90px) / 4);
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: $tablet-screen - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team-section__text-content {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 112px;
+  padding-right: 112px;
+
+  @media screen and (min-width: $tablet-screen) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.team-section__name,
+.team-section__position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-section__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.team-section__position {
+  margin-bottom: 16px;
+}
