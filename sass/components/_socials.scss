@@ -1,4 +1,11 @@
 /* Соціальні мережі */
+.socials-container {
+  @include flex();
+  margin-left: auto;
+  margin-right: auto;
+  width: 209px;
+}
+
 .socials {
   background-color: $primary-background-color;
   fill: $socials-color;

@@ -49,18 +49,8 @@
 .team-section__text-content {
   padding-top: 30px;
   padding-bottom: 24px;
-  padding-left: 112px;
-  padding-right: 112px;
-
-  @media screen and (min-width: $tablet-screen) {
-    padding-left: 74px;
-    padding-right: 74px;
-  }
-
-  @media screen and (min-width: $desktop-screen) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .team-section__name,

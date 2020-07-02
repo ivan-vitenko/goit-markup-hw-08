@@ -13,6 +13,8 @@
 
 .mobile-menu-container {
   @include flex();
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 4px 8px rgba(0, 0, 0, 0.04);
 
   @media screen and (max-width: $tablet-screen - 1px) {
     display: none;
@@ -23,10 +25,10 @@
     width: 100%;
     padding: 50px 60px 60px 60px;
     background-color: $primary-background-color;
-  }
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: block;
+    }
   }
 }
 
@@ -37,7 +39,7 @@
   }
 
   @media screen and (min-width: $desktop-screen) {
-    margin-right: 309px;
+    margin-right: 305px;
   }
 }
 
@@ -134,11 +136,24 @@
 .contacts__link {
   display: flex;
   align-items: center;
+  font-size: 18px;
+
+  @media screen and (min-width: $tablet-screen) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop-screen) {
+    font-size: 14px;
+  }
 }
 
 %contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
+    margin-right: 8px;
+  }
 }
 
 .contacts__icon--envelope {

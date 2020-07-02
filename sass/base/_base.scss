@@ -36,7 +36,10 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: $mobile-screen;
+
+  @media screen and (max-width: $tablet-screen - 1px) {
+    max-width: $mobile-screen;
+  }
 
   @media screen and (min-width: $tablet-screen) {
     width: $tablet-screen;

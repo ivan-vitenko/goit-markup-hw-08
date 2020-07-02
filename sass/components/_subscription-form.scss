@@ -4,10 +4,17 @@
   }
 }
 
+.subscription-form__container {
+  @media screen and (min-width: $desktop-screen) {
+    display: flex;
+  }
+}
+
 .subscription-form__input {
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
+  width: 100%;
 
   font-size: 16px;
   line-height: 1.25;
@@ -23,10 +30,6 @@
     font-size: 16px;
     letter-spacing: 0.03em;
     color: $contacts-footer;
-  }
-
-  @media screen and (max-width: $tablet-screen - 1px) {
-    width: 100%;
   }
 
   @media screen and (min-width: $tablet-screen) {
@@ -47,7 +50,8 @@
 
 .subscription-form__button-container {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: max-content;
 
   @media screen and (max-width: $desktop-screen - 1px) {
     margin-left: calc((100% - 200px) / 2);

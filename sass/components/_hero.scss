@@ -4,7 +4,6 @@
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  width: $mobile-screen;
 
   background-color: $possibility-background-color;
   background-repeat: no-repeat;
@@ -14,6 +13,8 @@
   text-align: center;
 
   @media screen and (max-width: $tablet-screen - 1px) {
+    max-width: $mobile-screen;
+
     @media screen and (min-device-pixel-ratio: 2),
       screen and (-webkit-min-device-pixel-ratio: 2),
       screen and (-o-min-device-pixel-ratio: 2/1),
@@ -92,7 +93,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 360px;
 
   font-size: 26px;
   line-height: 1.62;
@@ -100,6 +100,10 @@
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and(max-width: $tablet-screen - 1px) {
+    width: 75%;
+  }
 
   @media screen and (min-width: $desktop-screen) {
     width: 696px;

@@ -213,7 +213,7 @@
             <div class="team-section__text-content">
               <h3 class="team-section__name">Николай Кучеренко</h3>
               <p lang="en" class="team-section__position">Product Designer</p>
-              <ul class="space-between">
+              <ul class="socials-container">
                 <li>
                   <a href="" class="flex-center socials">
                     <svg class="socials__icon">
@@ -262,7 +262,7 @@
             <div class="team-section__text-content">
               <h3 class="team-section__name">Ольга Иванова</h3>
               <p lang="en" class="team-section__position">Frontend Developer</p>
-              <ul class="space-between">
+              <ul class="socials-container">
                 <li>
                   <a href="" class="flex-center socials">
                     <svg class="socials__icon">
@@ -311,7 +311,7 @@
             <div class="team-section__text-content">
               <h3 class="team-section__name">Андрей Шевченко</h3>
               <p lang="en" class="team-section__position">Marketing</p>
-              <ul class="space-between">
+              <ul class="socials-container">
                 <li>
                   <a href="" class="flex-center socials">
                     <svg class="socials__icon">
@@ -360,7 +360,7 @@
             <div class="team-section__text-content">
               <h3 class="team-section__name">Иван Николаев</h3>
               <p lang="en" class="team-section__position">UI Designer</p>
-              <ul class="space-between">
+              <ul class="socials-container">
                 <li>
                   <a href="" class="flex-center socials">
                     <svg class="socials__icon">
@@ -528,21 +528,23 @@
 
         <form action="" class="subscription-form">
           <p class="slogans__title">Подпишитесь на рассылку</p>
-          <input
-            type="email"
-            class="subscription-form__input"
-            name="subscription-mail"
-            placeholder="E-mail"
-          />
+          <div class="subscription-form__container">
+            <input
+              type="email"
+              class="subscription-form__input"
+              name="subscription-mail"
+              placeholder="E-mail"
+            />
 
-          <div class="subscription-form__button-container">
-            <button type="submit" class="subscription-form__button">
-              Подписаться
-            </button>
+            <div class="subscription-form__button-container">
+              <button type="submit" class="subscription-form__button">
+                Подписаться
+              </button>
 
-            <svg class="subscription-form__button-icon">
-              <use href="./images/sprite-opt.svg#icon-send"></use>
-            </svg>
+              <svg class="subscription-form__button-icon">
+                <use href="./images/sprite-opt.svg#icon-send"></use>
+              </svg>
+            </div>
           </div>
         </form>
       </div>
@@ -550,82 +552,84 @@
 
     <!--Модальне вікно-->
     <div class="backdrop is-transparent" data-modal>
-      <form action="" class="order-form">
-        <b class="order-form__slogan">
-          Оставьте свои данные, мы вам перезвоним
-        </b>
-        <label class="order-form__item-container">
-          <input
-            type="text"
-            class="order-form__item"
-            name="name"
-            placeholder=" "
-          />
-          <span class="order-form__label">Имя</span>
+      <div class="modal">
+        <form action="" class="order-form">
+          <b class="order-form__slogan">
+            Оставьте свои данные, мы вам перезвоним
+          </b>
+          <label class="order-form__item-container">
+            <input
+              type="text"
+              class="order-form__item"
+              name="name"
+              placeholder=" "
+            />
+            <span class="order-form__label">Имя</span>
 
-          <svg class="order-form__icon">
-            <use href="./images/sprite-opt.svg#icon-name"></use>
-          </svg>
-        </label>
+            <svg class="order-form__icon">
+              <use href="./images/sprite-opt.svg#icon-name"></use>
+            </svg>
+          </label>
 
-        <label class="order-form__item-container">
-          <input
-            type="tel"
-            class="order-form__item"
-            name="phone"
-            placeholder=" "
-          />
-          <span class="order-form__label">Телефон</span>
+          <label class="order-form__item-container">
+            <input
+              type="tel"
+              class="order-form__item"
+              name="phone"
+              placeholder=" "
+            />
+            <span class="order-form__label">Телефон</span>
 
-          <svg class="order-form__icon">
-            <use href="./images/sprite-opt.svg#icon-phone"></use>
-          </svg>
-        </label>
+            <svg class="order-form__icon">
+              <use href="./images/sprite-opt.svg#icon-phone"></use>
+            </svg>
+          </label>
 
-        <label class="order-form__item-container">
-          <input
-            type="email"
-            class="order-form__item"
-            name="mail"
-            placeholder=" "
-          />
-          <span class="order-form__label">Почта</span>
+          <label class="order-form__item-container">
+            <input
+              type="email"
+              class="order-form__item"
+              name="mail"
+              placeholder=" "
+            />
+            <span class="order-form__label">Почта</span>
 
-          <svg class="order-form__icon">
-            <use href="./images/sprite-opt.svg#icon-mail"></use>
-          </svg>
-        </label>
+            <svg class="order-form__icon">
+              <use href="./images/sprite-opt.svg#icon-mail"></use>
+            </svg>
+          </label>
 
-        <label class="order-form__item-container--margin-textarea">
-          <textarea
-            name="comment"
-            class="order-form__item"
-            placeholder=" "
-          ></textarea>
+          <label class="order-form__item-container--margin-textarea">
+            <textarea
+              name="comment"
+              class="order-form__item"
+              placeholder=" "
+            ></textarea>
 
-          <span class="order-form__label--comment-position">Комментарий</span>
-        </label>
+            <span class="order-form__label--comment-position">Комментарий</span>
+          </label>
 
-        <label class="checkbox">
-          <input type="checkbox" class="checkbox__icon" name="agreement" />
-          <span class="checkbox__custom-icon"></span>
-          <span>
-            Соглашаюсь с рассылкой и принимаю
-            <a href="" class="order-form__agreement-link">Условия договора</a>
-          </span>
-        </label>
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__icon" name="agreement" />
+            <span class="checkbox__custom-icon"></span>
+            <span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="order-form__agreement-link">Условия договора</a>
+            </span>
+          </label>
 
-        <button type="submit" class="order-form__submit-button">
-          Отправить
-        </button>
+          <button type="submit" class="order-form__submit-button">
+            Отправить
+          </button>
 
-        <div class="close-button">
-          <button class="close-button__button" data-modal-close></button>
-          <svg class="close-button__icon">
-            <use href="./images/sprite-opt.svg#close"></use>
-          </svg>
-        </div>
-      </form>
+          <div class="close-button">
+            <button class="close-button__button" data-modal-close></button>
+            <svg class="close-button__icon">
+              <use href="./images/sprite-opt.svg#close"></use>
+            </svg>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="./js/menu.js"></script>

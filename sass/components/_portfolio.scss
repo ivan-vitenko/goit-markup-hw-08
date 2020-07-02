@@ -14,7 +14,7 @@
   }
 }
 
-.filter__item:first-child {
+.filter__item:nth-child(-n + 3) {
   @media screen and (max-width: $tablet-screen - 1px) {
     margin-bottom: 15px;
   }
@@ -32,11 +32,13 @@
 }
 
 .portfolio-section__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: $tablet-screen - 1px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
-  @media screen and (min-width: $tablet-screen) {
+  @media screen and (min-width: $tablet-screen) and (max-width: $desktop-screen - 1px) {
     width: calc((100% - 30px) / 2);
 
     &:not(:nth-last-child(-n + 2)) {
