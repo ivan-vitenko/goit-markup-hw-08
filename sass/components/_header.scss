@@ -13,8 +13,6 @@
 
 .mobile-menu-container {
   @include flex();
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 4px 8px rgba(0, 0, 0, 0.04);
 
   @media screen and (max-width: $tablet-screen - 1px) {
     display: none;
@@ -25,6 +23,8 @@
     width: 100%;
     padding: 50px 60px 60px 60px;
     background-color: $primary-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
       display: block;
@@ -33,6 +33,10 @@
 }
 
 .main-nav {
+  @media screen and (max-width: $tablet-screen - 1px) {
+    margin-bottom: 50px;
+  }
+
   @media screen and (min-width: $tablet-screen) {
     display: flex;
     margin-right: 84px;
@@ -55,22 +59,29 @@
   @media screen and (max-width: $tablet-screen - 1px) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
   }
 }
 
 .main-nav__item {
   position: relative;
   width: max-content;
+
+  &:not(:last-child) {
+    @media screen and (max-width: $tablet-screen - 1px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $tablet-screen) {
+      margin-right: 50px;
+    }
+  }
 }
 
-.main-nav__item:not(:last-child) {
+.main-nav__item.main-nav__item--current:nth-child(1),
+.main-nav__item.main-nav__item--current:nth-child(2),
+.main-nav__item.main-nav__item--current:nth-child(3) {
   @media screen and (max-width: $tablet-screen - 1px) {
-    margin-bottom: 20px;
-  }
-
-  @media screen and (min-width: $tablet-screen) {
-    margin-right: 50px;
+    margin-bottom: 32px;
   }
 }
 

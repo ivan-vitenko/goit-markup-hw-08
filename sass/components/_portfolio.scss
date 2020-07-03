@@ -14,14 +14,60 @@
   }
 }
 
-.filter__item:nth-child(-n + 3) {
-  @media screen and (max-width: $tablet-screen - 1px) {
+@media screen and (max-width: 238px) {
+  .filter__item:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .filter__item:not(:nth-child(3)):not(:last-child) {
+    margin-right: 8px;
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 239px) and (max-width: 271px) {
+  .filter__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .filter__item:not(:nth-child(2)):not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 272px) and (max-width: 286px) {
+  .filter__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
+
+  .filter__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 287px) and (max-width: 391px) {
+  .filter__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .filter__item:not(:nth-last-child(-n + 2)) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 392px) and (max-width: $tablet-screen - 1px) {
+  .filter__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
+
+  .filter__item:not(:nth-child(3)) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: $tablet-screen) {
+  .filter__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .portfolio-section__list {
