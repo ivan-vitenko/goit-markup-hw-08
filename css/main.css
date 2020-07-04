@@ -171,6 +171,12 @@ p {
 /* Шапка */
 .header {
   border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+}
+
+.header--some-bullshit {
+  position: fixed;
+  width: 100%;
 }
 
 .header-content {
@@ -520,6 +526,13 @@ p {
   background-size: cover;
   background-position: center;
   text-align: center;
+}
+
+.hero--some-bullshit {
+  height: 83px;
+  overflow: hidden;
+  padding: 0;
+  background-position-y: bottom;
 }
 
 @media screen and (max-width: 767px) {
@@ -1528,7 +1541,7 @@ p {
   .filter__item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 15px;
   }
-  .filter__item:not(:nth-child(3)) {
+  .filter__item:not(:nth-child(3)):not(:last-child) {
     margin-right: 8px;
   }
 }

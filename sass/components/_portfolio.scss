@@ -59,7 +59,7 @@
     margin-bottom: 15px;
   }
 
-  .filter__item:not(:nth-child(3)) {
+  .filter__item:not(:nth-child(3)):not(:last-child) {
     margin-right: 8px;
   }
 }

@@ -1,6 +1,12 @@
 /* Шапка */
 .header {
   border-bottom: 1px solid #ececec;
+  background-color: $primary-background-color;
+
+  &--some-bullshit {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 .header-content {
